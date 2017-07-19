@@ -8,8 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.models.User;
 import com.revature.services.Logger;
@@ -24,7 +22,7 @@ public class PersonalInfoServlet extends HttpServlet{
 		
 		User sanitizedUser = user;
 		//make sure not to publicly display the user's password
-		sanitizedUser.setU_password(StringUtils.repeat("*", user.getU_password().length()));
+		sanitizedUser.setU_password(UserService.maskString(user.getU_password()));
 		
 		//Object to JSON in file
 		String userInfo = new ObjectMapper().writeValueAsString(user);

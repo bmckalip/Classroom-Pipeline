@@ -10,6 +10,15 @@ import com.revature.models.User;
 public class UserService {
 	private static UserDao dao = new UserDaoImpl();
 	
+	public static String maskString(String s){
+		StringBuilder sb = new StringBuilder();
+		for(int i=0; i < s.length(); i++){
+			sb.append("*");
+		}
+		
+		return sb.toString();
+	}
+	
 	//parsing methods
 	public static String getEndpoint(String url){
 		String[] segments = url.split("/");
