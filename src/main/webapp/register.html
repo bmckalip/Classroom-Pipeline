@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Register</title>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" 
+		      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+		      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+		      crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" 
+			  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+			  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+			  crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+				crossorigin="anonymous">
+		</script>
+		
+		<link rel="stylesheet" href="resources/css/bmcStrap.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<h3>Register as a New Student</h3>
+			<form class="form-group" action="register" method="POST">
+				<div class="row">
+					<div class="col-md-2">First Name: </div>
+					<div class="col-md-10"><input type="text" placeholder="First Name" name="first_name" autofocus/></div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-2">Last Name:</div>
+					<div class="col-md-10"><input type="text" placeholder="Last Name" name="last_name" /></div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-2">Email:</div>
+					<div class="col-md-10"><input type="text" placeholder="Email" name="email" /></div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2">Username:</div>
+					<div class="col-md-10"><input type="text" placeholder="Username" name="username" /></div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-2">Password:</div>
+					<div class="col-md-10"><input type="password" placeholder="Password" name="password"/></div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-2">Confirm Password:</div>
+					<div class="col-md-10"><input type="password" placeholder="Confirm Password" name="password_confirm"/></div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-10">
+						<input class="btn btn-danger" type="submit" value="Register"/>
+						<a role="button" title="Already Registered? Login." class="btn btn-primary" href="login.html">Login</a>
+					</div>
+				</div>
+			</form>
+			
+		</div>
+	</body>
+</html>

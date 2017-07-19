@@ -1,0 +1,12 @@
+CREATE SEQUENCE u_id_seq START WITH 1 INCREMENT BY 1;
+/
+
+CREATE OR REPLACE TRIGGER set_u_id_trigger
+BEFORE INSERT ON users
+FOR EACH ROW
+BEGIN
+  IF :new.u_id IS NULL THEN
+    SELECT u_id_seq.nextval INTO :new.u_id FROM DUAL;
+  END IF;
+END;
+/
